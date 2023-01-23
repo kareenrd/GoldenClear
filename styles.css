@@ -1,0 +1,55 @@
+
+.tarjeta{
+	border: 2px solid aqua;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+.pointer:hover{
+	background-color: aquamarine;
+}
+
+.previewPokemon{
+
+}
+
+.imgPokemon{
+	border: 2px solid #5235d0;
+}
+
+.pokemones{
+	height: 300px;
+	width: 200px;
+	border: 1px solid #ddd;
+	background: #f1f1f1;
+	overflow-y: scroll;
+}
+
+.pokemones::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.pokemones::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+.pokemones::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #5235d0;
+}
+
+@media screen and (max-width: 576px) {
+	.pokemones{
+		width: 125px;
+	}
+	
+}
