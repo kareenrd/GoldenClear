@@ -15,8 +15,20 @@
 
 }
 
-.imgPokemon{
-	border: 2px solid #5235d0;
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  
+
+#stats > div{
+	border-bottom: 1px solid #5235d0;
+	padding: 5px;
+}
+
+.imgPokemon, #imgPokemon{
+	/* border: 2px solid #5235d0; */
+	text-align: center;
 }
 
 .pokemones{

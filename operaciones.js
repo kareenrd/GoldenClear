@@ -44,10 +44,17 @@ function getPokemon(id){
             var res = JSON.parse(data);
 			console.log(res);
 			document.getElementById('pokemon'+id).style= 'background-color: aqua;';
-			document.getElementById('previewPokemon').innerHTML = 
-			'<div class="imgPokemon text-center p-2">'+
-				'<img src="'+res['sprites']['other']['dream_world'].front_default+'" width=200/>'+
-			'</div>';
+			document.getElementById('imgPokemon').innerHTML = `<img class="imgPokemon" src=" ${res['sprites']['other']['dream_world'].front_default}" width=150 />`;
+
+			var stats = res['stats'];
+			var htmlStats = '';
+			for(var i in stats){
+				htmlStats += 
+				`<div class="col-6"> ${stats[i]['stat'].name} </div>`+
+				`<div class="col-6" > ${stats[i].base_stat} </div>`;
+			}
+			document.getElementById('stats').innerHTML = htmlStats;
+
 	   },
 	   error:function(data){
 		//lo que devuelve si falla tu archivo mifuncion.php
@@ -67,7 +74,7 @@ function getGeneration(){
 		success:function(data){
 			//lo que devuelve tu archivo mifuncion.php
             var res = JSON.parse(data);
-			console.log(res);
+			//console.log(res);
 			var pokemon = res['pokemon_species'];
 
 			var cardPokemon = '';
