@@ -11,17 +11,13 @@
 	background-color: aquamarine;
 }
 
-.previewPokemon{
-
-}
-
 .fakeimg {
     height: 200px;
     background: #aaa;
   }
-  
 
-#stats > div{
+
+.stats > div{
 	border-bottom: 1px solid #5235d0;
 	padding: 5px;
 }

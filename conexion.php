@@ -6,16 +6,16 @@ $info = $_POST;
 if(sizeof($info) > 0){
     $res = false;
     switch ($info['tipo']) {
-        case '1':
+        case 'allGenerations':
             $res = getAll();
             break;
 
-        case '2':
+        case 'infoPokemon':
             $res = getInfo($info['id']);
             break;
 
         case 'generation':
-            $res = getGenertion();
+            $res = getGenertion($info['id']);
             break;
         
         default:
@@ -35,12 +35,12 @@ function getInfo($id){
 }
 
 function getAll(){
-$data = file_get_contents('https://pokeapi.co/api/v2/pokemon');
+$data = file_get_contents('https://pokeapi.co/api/v2/generation');
 	return $data;
 }
 
-function getGenertion(){
-     return file_get_contents('https://pokeapi.co/api/v2/generation/1/');
+function getGenertion($id){
+     return file_get_contents('https://pokeapi.co/api/v2/generation/'.$id);
     
 }
 
